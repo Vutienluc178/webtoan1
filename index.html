@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kho Công Cụ Toán học & GVCN – NHC</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">
+    <span class="logo">∑</span>
+    <div>
+      <h1>Kho Công Cụ Toán học</h1>
+      <p class="subtitle">Lớp 10 · 11 · 12 · GVCN · Tiện ích</p>
+    </div>
+  </div>
+  <div class="actions">
+    <button id="toggleMenu" class="btn">☰ Menu</button>
+    <button id="toggleTheme" class="btn" title="Chuyển nền sáng/tối">🌓</button>
+  </div>
+</header>
+
+<div class="layout">
+  <nav id="sidebar" class="sidebar">
+    <section class="about">
+      <h3>🏫 Thông tin</h3>
+      <ul>
+        <li><strong>Tác giả:</strong> Thầy Vũ Tiến Lực</li>
+        <li><strong>Trường:</strong> THPT Nguyễn Hữu Cảnh</li>
+      </ul>
+    </section>
+
+    <details class="acc" data-group="menu">
+      <summary>🔢 Lớp 10</summary>
+      <ul>
+        <li><a data-embed href="tools/lop10/pt-bac-hai.html">Giải phương trình bậc hai</a></li>
+        <li><a data-embed href="tools/lop10/he-pt-2x2.html">Hệ phương trình 2×2</a></li>
+        <li><a data-embed href="tools/lop10/ham-bac-nhat-plot.html">Đồ thị y = ax + b</a></li>
+      </ul>
+    </details>
+
+    <details class="acc" data-group="menu">
+      <summary>📐 Lớp 11</summary>
+      <ul>
+        <li><a data-embed href="tools/lop11/tam-giac-trigon.html">Tam giác & Lượng giác</a></li>
+        <li><a data-embed href="tools/lop11/cap-so-cong.html">Cấp số cộng</a></li>
+      </ul>
+    </details>
+
+    <details class="acc" data-group="menu">
+      <summary>🧮 Lớp 12</summary>
+      <ul>
+        <li><a data-embed href="tools/lop12/to-hop-xac-suat.html">Tổ hợp & Xác suất</a></li>
+        <li><a data-embed href="tools/lop12/gioi-han-don-gian.html">Giới hạn đơn giản</a></li>
+      </ul>
+    </details>
+
+    <details class="acc" data-group="menu">
+      <summary>👨‍🏫 GVCN</summary>
+      <ul>
+        <li><a data-embed href="tools/gvcn/random-picker.html">Bốc thăm học sinh</a></li>
+        <li><a data-embed href="tools/gvcn/pomodoro.html">Pomodoro 25/5</a></li>
+        <li><a data-embed href="tools/gvcn/mau-tin-zalo.html">Mẫu tin nhắn Zalo</a></li>
+      </ul>
+    </details>
+
+    <details class="acc" data-group="menu">
+      <summary>🧰 Tiện ích</summary>
+      <ul>
+        <li><a data-embed href="tools/tien-ich/fraction-decimal.html">Phân số ↔ Thập phân</a></li>
+        <li><a data-embed href="tools/tien-ich/matrix-3x3.html">Ma trận 3×3 (định thức)</a></li>
+      </ul>
+    </details>
+
+    <details class="acc" data-group="menu">
+      <summary>🌐 Liên kết nhanh</summary>
+      <ul>
+        <li><a href="https://www.geogebra.org/" target="_blank" rel="noopener">GeoGebra</a></li>
+        <li><a href="https://www.desmos.com/calculator?lang=vi" target="_blank" rel="noopener">Desmos (VI)</a></li>
+      </ul>
+    </details>
+  </nav>
+
+  <main class="main">
+    <div class="welcome card">
+      <h2>Chào mừng!</h2>
+      <p>Chọn công cụ ở thanh bên trái để sử dụng. Bạn có thể mở trong khung xem nhanh (iframe) hoặc <em>mở tab mới</em> bằng cách bấm phải chuột.</p>
+      <div class="tips">
+        <p>⚡ Mẹo: Dùng <strong>☰ Menu</strong> để ẩn/hiện danh sách, <strong>🌓</strong> để đổi chế độ Sáng/Tối.</p>
+      </div>
+    </div>
+
+    <div class="viewer card">
+      <div class="viewer-bar">
+        <span id="viewerTitle">Xem nhanh</span>
+        <a id="openNewTab" class="btn small" href="#" target="_blank" rel="noopener">Mở tab mới ↗</a>
+      </div>
+      <iframe id="viewer" title="Xem nhanh công cụ" src="" loading="lazy"></iframe>
+    </div>
+  </main>
+</div>
+
+<footer class="footer">
+  <small>© 2025 · Tác giả: Thầy Vũ Tiến Lực – THPT Nguyễn Hữu Cảnh · Phát hành trên GitHub Pages</small>
+</footer>
+
+<script src="js/app.js"></script>
+</body>
+</html>
