@@ -63,3 +63,46 @@
     openNewTab.setAttribute('href', tool);
   }
 })();
+(async function buildMenu(){
+  const wrap = document.getElementById('autoMenu');
+  try{
+    const res = await fetch('tools/index.json', {cache:'no-store'});
+    const groups = await res.json();
+    wrap.innerHTML = ''; // clear "Đang tải…"
+
+    groups.forEach((g, gi)=>{
+      const det = document.createElement('details');
+      det.className = 'acc';
+      if(gi===0) det.open = true;
+      const sum = document.createElement('summary');
+      sum.textContent = g.group || 'Nhóm';
+      det.appendChild(sum);
+
+      const ul = document.createElement('ul');
+      (g.items||[]).forEach(item=>{
+        const li = document.createElement('li');
+        const a  = document.createElement('a');
+        a.textContent = item.title || item.path;
+        a.href = 'tools/' + item.path.replace(/^tools\//,'');
+        a.setAttribute('data-embed','');
+        a.addEventListener('click', e=>{
+          e.preventDefault();
+          const url = a.getAttribute('href');
+          const iframe = document.getElementById('viewer');
+          const title  = document.getElementById('viewerTitle');
+          const open   = document.getElementById('openNewTab');
+          iframe.src = url;
+          title.textContent = item.title || url;
+          open.href = url;
+        });
+        li.appendChild(a);
+        ul.appendChild(li);
+      });
+      det.appendChild(ul);
+      wrap.appendChild(det);
+    });
+  }catch(err){
+    wrap.textContent = 'Không tải được menu (tools/index.json).';
+  }
+})();
+
