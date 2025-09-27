@@ -1,0 +1,16 @@
+[
+  {
+    "group": "🔢 Lớp 10",
+    "items": [
+      {"title": "Giải phương trình bậc hai", "path": "lop10/pt-bac-hai.html"},
+      {"title": "Hệ phương trình 2×2",      "path": "lop10/he-pt-2x2.html"}
+    ]
+  },
+  {
+    "group": "📐 Lớp 11",
+    "items": [
+      {"title": "Tam giác & Lượng giác",    "path": "lop11/tam-giac-trigon.html"},
+      {"title": "Cấp số cộng",              "path": "lop11/cap-so-cong.html"}
+    ]
+  }
+]
