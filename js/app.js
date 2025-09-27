@@ -50,3 +50,16 @@
   }
 
 })();
+// Auto load tool from query string (?tool=...)
+(function(){
+  const params = new URLSearchParams(window.location.search);
+  const tool = params.get("tool");
+  if(tool){
+    const viewer = document.getElementById('viewer');
+    const viewerTitle = document.getElementById('viewerTitle');
+    const openNewTab = document.getElementById('openNewTab');
+    viewer.setAttribute('src', tool);
+    viewerTitle.textContent = "Xem: " + decodeURIComponent(tool.split('/').pop());
+    openNewTab.setAttribute('href', tool);
+  }
+})();
